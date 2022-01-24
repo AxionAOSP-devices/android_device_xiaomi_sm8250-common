@@ -281,6 +281,9 @@ PRODUCT_PACKAGES += \
     LineageSettingsOverlayCommon \
     SettingsOverlayCommon \
     SettingsProviderOverlayCommon \
+    SettingsProviderM2012K11AC \
+    SettingsProviderM2012K11AG \
+    SettingsProviderM2012K11AI \
     SystemUIOverlayCommon \
     TelephonyOverlayCommon \
     WifiResourcesOverlayCommon
