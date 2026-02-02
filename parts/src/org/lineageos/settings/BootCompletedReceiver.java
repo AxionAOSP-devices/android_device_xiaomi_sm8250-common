@@ -20,12 +20,10 @@ package org.lineageos.settings;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
-import android.content.IntentFilter;
 import android.util.Log;
 
 import org.lineageos.settings.dirac.DiracUtils;
 import org.lineageos.settings.thermal.ThermalUtils;
-import org.lineageos.settings.touchsampling.TouchSamplingUtils;
 import org.lineageos.settings.utils.FileUtils;
 import android.content.SharedPreferences;
 import androidx.preference.PreferenceManager;
@@ -49,7 +47,6 @@ public class BootCompletedReceiver extends BroadcastReceiver {
             Log.d(TAG, "Dirac is not present in system");
         }
         ThermalUtils.startService(context);
-        TouchSamplingUtils.restoreSamplingValue(context);
 
         // DC Dimming
         SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(context);
