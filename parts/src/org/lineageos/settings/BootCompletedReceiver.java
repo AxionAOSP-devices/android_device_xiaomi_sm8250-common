@@ -25,7 +25,6 @@ import android.util.Log;
 
 import org.lineageos.settings.dirac.DiracUtils;
 import org.lineageos.settings.thermal.ThermalUtils;
-import org.lineageos.settings.refreshrate.RefreshUtils;
 import org.lineageos.settings.touchsampling.TouchSamplingUtils;
 import org.lineageos.settings.utils.FileUtils;
 import android.content.SharedPreferences;
@@ -50,7 +49,6 @@ public class BootCompletedReceiver extends BroadcastReceiver {
             Log.d(TAG, "Dirac is not present in system");
         }
         ThermalUtils.startService(context);
-        RefreshUtils.startService(context);
         TouchSamplingUtils.restoreSamplingValue(context);
 
         // DC Dimming
